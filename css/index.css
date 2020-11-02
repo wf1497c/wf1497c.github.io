@@ -506,7 +506,7 @@ blockquote p {
     padding: 0 3.6rem;
   }
   .page article {
-    padding: 0 3.6rem 3.6rem;
+    padding: 0 9rem 3.6rem;
   }
 }
 .side-card {
@@ -519,7 +519,7 @@ blockquote p {
   padding-left: 10px;
 }
 .side-card img {
-  width: 100%;
+  width: 120%;
 }
 .side-card p,
 .side-card li {
@@ -528,14 +528,13 @@ blockquote p {
 }
 .author-avatar {
   display: table-cell;
-  vertical-align: top;
   width: 40px;
-  height: 40px;
+  height: 40x;
 }
 .author-avatar img {
   width: 100%;
-  max-width: 110px;
-  border-radius: 50%;
+  max-width: 250px;
+  border-radius: 0%;
 }
 .author-discrip {
   display: table-cell;
@@ -546,11 +545,11 @@ blockquote p {
 }
 .author-discrip h3 {
   margin: 0px;
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 .author-discrip .author-bio {
-  font-size: 1.2rem;
-  margin: 0.3rem 0;
+  font-size: 1.4rem;
+  margin: 0.3rem;
 }
 .author-links {
   display: table-cell;
@@ -704,8 +703,8 @@ blockquote p {
 }
 @media (min-width: 34em) {
   .side-card {
-    width: 15.25424%;
-    min-width: 165px;
+    width: 180px;
+    min-width: 180px;
     float: left;
     margin-right: 1.69492%;
     opacity: 0.75;
@@ -775,6 +774,8 @@ blockquote p {
   }
   .cv-links {
     margin: 0;
+    text-align: center;
+    align-items: center;
   }
 }
 #page_footer {
