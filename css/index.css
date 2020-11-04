@@ -426,8 +426,8 @@ blockquote p {
 }
 #page_main {
   min-height: 72%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 8rem;
+  margin-right: 0;
   clear: both;
   margin-top: 3.2rem;
   margin-bottom: 6.4rem;
@@ -447,7 +447,8 @@ blockquote p {
 }
 .page article {
   padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  padding-right: 0rem;
+  margin-left: 2rem;
 }
 .page article h1 {
   font-size: 3rem;
@@ -514,6 +515,7 @@ blockquote p {
   margin-bottom: 1.6rem;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  align-items: center;
 }
 .side-card .card-wrap {
   padding-left: 10px;
@@ -712,6 +714,7 @@ blockquote p {
     transition: opacity 0.2s ease-in-out;
   }
   .side-card .card-wrap {
+    position: relative;
     padding: 10px 10px 10px 17px;
   }
   .sticky {
@@ -736,12 +739,14 @@ blockquote p {
   .author-discrip {
     display: block;
     width: 100%;
-    padding-left: 0;
+    text-align: center;
+    padding-left: 5px;
     padding-right: 0;
     color: #000;
   }
   .author-discrip .author-bio {
     font-size: 1.4rem;
+    text-align: center;
     margin-top: 8px;
     margin-bottom: 10px;
   }
@@ -755,7 +760,8 @@ blockquote p {
     position: relative;
     width: auto;
     margin: 0;
-    padding: 0;
+    padding-top: 0px;
+    padding-left: 18px;
     border: 0;
     background: transparent;
     box-shadow: none;
@@ -768,12 +774,14 @@ blockquote p {
   }
   .social-links {
     display: block;
-    margin-top: 0.8rem;
-    margin-bottom: 1.6rem;
-    padding: 0;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    align-items: center;
+    padding-left: 10px;
   }
   .cv-links {
     margin: 0;
+    padding-left: 10px;
     text-align: center;
     align-items: center;
   }
