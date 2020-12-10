@@ -2,28 +2,43 @@
     <head>
         <style>
             .flex {
-              display: inline-flex;
-              padding: 0px;
+              display: flex;
+              padding: 5px;
+              <!--background-color: #003C9D;-->
               // 修改以下值試試看 row | row-reverse | column | column-reverse;
               flex-direction: row;
               flex-wrap: wrap;
-              border: 1px solid black;
-              justify-content: center;
+              word-wrap:break-word;
             }
             .item {
-                height: 400px;
-                width: 300px;
-                margin: 0px;
-                display: inline-flex;
+                height: 280px;
+                width: 360px;
+                margin: 20px;
+                margin-bottom: 50px;
+                display: flex;
+                align-items: top;
                 justify-content: left;
-                align-items: center;
-                color: white;
+                color: black;
                 font-size: 2rem;
+                <!-- background-color: #4F4F4F; -->
+            }
+            .imgdes {
+                width: 360px;
+                margin: 20px;
+                margin-bottom: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                color: black;
+                font-size: 2rem;
+                text-align: left;
+                word-wrap:break-word
+                <!-- background-color: #4F4F4F; -->
             }
             .item2 {
                 height: 400px;
                 width: 500px;
-                background-color: #0066CC;
+                background-color: #5B00AE;
                 margin: 0px;
                 display: inline-flex;
                 justify-content: center;
@@ -32,49 +47,6 @@
                 font-size: 2rem;
                 padding-left: 20px;
                 line-height: 30px;
-                padding-right: 20px;
-            }
-            h5 {
-                margin: 0;
-            }
-            hr {
-                margin-top: 20px;
-                margin-bottom: 15px;
-                margin-right: 20px;
-            }
-            a {
-                 style="color:red;"
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex">
-            <div class="item"><img src="/img/pig.png" height= "400"; width= "320"/></div>
-            <div class="item2"><font face="TimesNewRoman" size=7 align="left" align="top"><h5>Robotic/UFS System</h5><hr size="5" noshade color="#ff8000"></hr><font face="TimesNewRoman" size=5 align="left">In this study, we used a robotic/UFS system to evaluate the stability of shoulder joint under different conditions, including rupture of supraspinatus tendon and repair with self-designed suture anchor ... <a href="/AoI/biomechanics/UFS.html" style="color:#FF0000;"><strong>Read more</strong></a></div>
-        </div>
-    </body>
-</html>
-<br>
-
-
-<html>
-    <head>
-        <style>
-            .flex {
-              display: inline-flex;
-              padding: 0px;
-              // 修改以下值試試看 row | row-reverse | column | column-reverse;
-              flex-direction: row;
-            }
-            .item {
-                height: 400px;
-                width: 300px;
-                margin: 0px;
-                display: inline-flex;
-                justify-content: left;
-                align-items: center;
-                color: white;
-                font-size: 2rem;
             }
             .item3 {
                 height: 400px;
@@ -90,24 +62,70 @@
                 padding-right: 20px;
                 line-height: 30px;
             }
-            h5 {
+            h2 {
                 margin: 0;
             }
             hr {
                 margin-top: 20px;
-                margin-bottom: 15px;
+                margin-bottom: 50px;
                 margin-right: 20px;
             }
             a {
                  style="color:red;"
             }
+            li {
+              color: black;
+              font-size: 1em;
+              list-style:none
+            }
+            ul {
+                margin: 0px;
+            }
+            br {
+                line-height: 10%;
+                font-size: 24%;
+            }
+            .page article {
+                padding-left: 70px;
+                padding-right: 0px;
+            }
+            h1 {
+                margin-bottom: 30px;
+            }         
+            p{
+              word-wrap:break-word; 
+              width: 900;
+            }   
         </style>
     </head>
     <body>
+        <h1><font face="TimesNewRoman" size=7> Warm-up Strategies for Achilles Tendon </font></h1>
+        <hr></hr>
+        <h1>Achilles Tendon</h1>
+        <p><font face="TimesNewRoman" size=5> Suture anchors (SAs) have been prevalently used in orthopedic surgery for repair of rotator cuff tears by inserting in lesser or great tuberosity by tendon-to-bone fixation. Mechanical strength in the bone-screw interface was taken as the primary consideration of SAs designs. Beneath the fixation of suture-tendon interface, under successive removal loading, SAs pullout is the most common mechanism in mechanical failure. In these cases, couples of patient-related and design-related factors involved in mechanical fixation strength against pull-out force could aggravate chronic and symptomatic progression of rotator cuff tear. This study focuses on the relevance between anchor removal and design-related factors including structures and materials. </p>
         <div class="flex">
-            <div class="item"><img src="/img/ul.png" height= "400"; width= "320"/></div>
-            <div class="item3"><font face="TimesNewRoman" size=7 align="left" align="top"><h5>Achilles Tendon Evaluation</h5><hr size="5" noshade color="#ff8000"></hr><font face="TimesNewRoman" size=5 align="left">In this study, we used ultrasound images to record Achilles tendon contraction after different heating strategies and 2D speckle tracking to analyze biomechanical characteristics ... <a href="/AoI/biomechanics/ul.html" style="color:#FF0000;"><strong>Read more</strong></a></div>
+            <div class="item"><img src="/img/article/SA/types.png" width="400px" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.1. SAs vary in different materials depending on the clinical purpose. For example, metallic materials, e.g. stainless steel, provide better fixation strength in osteoporotic cases with stronger properties. </div>
         </div>
+        <div class="flex">
+            <div class="item"><img src="/img/article/SA/tissue.png" width="400px" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.2. To attach the soft tissue to bone surface, SAs are used in 2 subparts: suture is stitched to rupture tendon with strong fixation and the anchors are inserted into bone until the body beneath the surface [1] </div>
+        </div>
+        <h1>Final Product</h1>
+        <p><font face="TimesNewRoman" size=5> In this 4-year project, we have developed a whole new SA with distinctive appearance, novel material, and workable mechanical strength. I've learned CAD, finite element analysis, CNC & 3D printing, ASTM F-543 procedure. In addition to these conventional procedures for designing implants, we also conducted biomechanical analysis using robotic arm/UFS system. 
+        <br><br>
+        Moreover, based on the consideration of reduction of additional cost from "one time" surgical tool in rotator cuff repair, I designed a new one equipped with torque-control mechanism to prevent overloading during clinical treatment and published it into <a target="_blank" rel="noopener" href="https://patents.google.com/patent/US20200170698A1/en">US patent</a>. I was also granted College Student Research Scholarship by Ministration of Science and Technology, Taiwan, for self-managing this design.
+        <br><br>
+        In the end, I want to thank all the team who have worked with me in this project for almost 4 years. The final product, a novel magnesium-based suture anchor, is examined by FDA certification now. After these long-term efforts, I sincerely hope someday this product we have designed would help more and more people around the world.
+        </p>
+        <div class="flex">
+            <div class="item"><img src="/img/article/SA/SA.png" width="400px" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.11. Final SA product</div>
+        </div>
+        <h1>Reference</h1>
+        <p><font face="TimesNewRoman" size=5>1. https://musculoskeletalkey.com/sutures-and-glenoid-anchors-for-instability/</p>
     </body>
 </html>
+
+
 </article></div></main><div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/AoI"> Research</a></li><li class="nav_item"><a class="nav-page" href="/Publications"> Publications</a></li><li class="nav_item"><a class="nav-page" href="/Exp"> Experience</a></li><li class="nav_item"><a class="nav-page" href="/Contact"> Contact</a></li></ul></div><div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div></div><footer id="page_footer"><div class="footer_wrap"><div class="copyright">&copy;2020 by Louis Tang</div><div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script><script src="/js/main.js"></script></body></html>
