@@ -100,10 +100,10 @@
     <body>
         <h1><font face="TimesNewRoman" size=7> Sitting Postures Recognition </font></h1>
         <hr></hr>
-        <p><font face="TimesNewRoman" size=5>(Watch my journal seminar presentation at TMU to understand this topic ↓)
+        <p><font face="TimesNewRoman" size=5>(Watch my presentation at 4th GCBME to understand this topic ↓)
         <br></br>
-        <iframe src="https://drive.google.com/file/d/1oiTyFDTkXZXd1q5wdsC7pRpU4rvUj3fs/preview" scrolling="no" frameborder="0" width="100%" height="430" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
-        <h1>Spine Deformity</h1>
+        <iframe src="https://drive.google.com/file/d/1TX4AsQJBE7JrQWObd2mpfWHSJ-1p8bv1/preview" scrolling="no" frameborder="0" width="100%" height="430" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        <h1><font face="TimesNewRoman" size=6>Spine Deformity</h1>
         <p><font face="TimesNewRoman" size=5> Long-term inappropriate upper body postures may cause the irreversible deformation in spine curvature related to diseases such as kyphosis, lordosis and scoliosis, which are commonly treated with invasive surgery. In addition, even though clinical treatment can give patients immediate improvement of their symptoms, problematic upper body posture still needs to be addressed. Such chronic diseases are irreversible and hard to monitor due to multi-plane free motion ranges. One efficient way is to correct people's trunk posture by motions-constraint devices. Since these facts, detection and correction  of spine deformity are crucial on early stages, or, for a bigger picture, within our daily life.
         <br>
         </p>
@@ -112,35 +112,84 @@
             <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.1. Referenced images from <a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s12178-011-9101-z">paper by Good et al.</a>. X-rays of a patient with progressive adult idiopathic scoliosis before and after thoracolumbar reconstruction T10-pelvis. Pedicle screw correction on coronal and sagittal plane through anterior lumbar interbody fusion L4- Sacrum were shown in the second and fourth pictures, respectively</div>
         </div>
         <h1>Upper Body Postures Monitoring Device</h1>
-        <p><font face="TimesNewRoman" size=5> In this study, we try to develop an "Intelligent cloth system", which is a wearable device for long-term inadequate postures detection. The idea is straightforward, cloths are not only fit to the upper body for a long period but also necessary for people to use in their daily life, like how cell phones are. Since that, the basic idea is to put sensors, which can acquire kinematic data related to upper body motions, onto the clothing system.  
+        <p><font face="TimesNewRoman" size=5> In this study, we try to develop an "Intelligent cloth system", which is a wearable device for long-term inadequate postures detection. The idea is straightforward, cloths are not only fit to the upper body for a long period but also necessary for people to use in their daily life, like how cell phones are. Since that, the basic idea is to put inertial sensors, which can acquire kinematic data related to upper body motions, onto the clothing system. The sensor part would be discussed at later section.
         <br><br>
-        Seven common upper body "sitting" postures are interested: Slump, upright, lean, l/r trunk bending, and l/r twisting. Sitting is one of Because all of these motions are single-axis, it's more easier to control the repetitive human trials.
+        Seven common upper body "sitting" postures are interested: Humpback, upright, lean, left/right trunk bending, and left/right twisting. Sitting is the most common activities for people on weekdays and weekends, accounts for almost 70% of their days, according to <a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1186/s12889-019-6960-5">this study by Arundell et al.</a> As a result, develop a device to monitor the sitting postures can help clinicians understand patients' behaviors. In addition, we designed all of these motions as single-axis rotation which are related to spine deformity, and it's more easier to control the human trials.
         </p>
         <div class="flex">
-            <div class="item"><img src="/img/article/GAN/Me.png" width="400px"/></div>
-            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.2. Examples of Color Augmentations provided by <a target="_blank" rel="noopener" href="https://www.researchgate.net/profile/Agnieszka_Mikolajczyk4/publication/325920702_Data_augmentation_for_improving_deep_learning_in_image_classification_problem/links/5d5d5569458515210257607c/Data-augmentation-for-improving-deep-learning-in-image-classification-problem.pdf">Mikolajczyk and Grochowski</a> in the domain of melanoma classification</div>
+            <div class="item"><img src="/img/article/Posture/Pos.png" width="400px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.2. Seven common sitting postures are our targets: humpback, upright, lean, R/L bending, and R/L twisting</div>
         </div>
         <div class="flex">
-            <div class="item"><img src="/img/article/GAN/Aug.png" width="400px"/></div>
-            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.3. Affine transformations in 2D: reflection, scale, rotation, shear, and translation. With this manipulation, the image number increase from one to six.</div>
+            <div class="item"><img src="/img/article/Posture/Cloth.png" width="400px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.3. The prime intelligent cloth system design, composed of multiple inertial sensors, and better fits to spine curvature</div>
         </div>
-        <h1>Generative Adversarial Networks</h1>
-        <p><font face="TimesNewRoman" size=5> Generative adversarial Networks(GAN) is a novel tool to perform images generation. GANs has been used to different images manipulation, including text-to-image synthesis, image translation, style fusion, image reconstruction, and also, data augmentation. The overall principle of GANs is a min-max strategy. There are two adversarial parts in GANs structure: generator and discriminator. Generator(G(z)) is commonly a decoder network which can decode a low-dimension vector with random noises to synthesize "fake" or real-like images. Discriminator(D(z)) is a classifier(commonly a network) to discriminate an input image as "fake" or real. The connection between this two distinctive networks is their adversarial interactions: generator's task is to "fool" the discriminator and discriminator's task is to "not be fooled" by generator, as the interactions between a counterfeit maker and a police. In the aspects of training, optimize GANs could be more difficult than other typical neural networks because of the trade-off between abilities of generator and discriminator. 
+        <h1>Inertial Measurement Units</h1>
+        <p><font face="TimesNewRoman" size=5> The sensors we used in this study is microelectromechanical systems (MEMS) 9-axis inertial measurement units(IMUs), composed of 3-axis accelerometer, gyroscope and magnetometer. IMUs have been widely used in global navigation system, for example, they are embedded into mobile phone to provide another modality of information of referenced system and corporated with GPS. A more easier understandable case is turning off GPS and your phone can still tell you where you "approximately" are and which direction you are facing. (They are both IMUs' magic!) The keys to provide such locational information are IMUs' signals-acceleration, angular velocity, and magnetic field-which are all refereced to global reference system.
+        <br><br>
+        However, all IMUs can provide are these three kinds of data, rather than location or orientation. The connection is called Attitude & Heading Reference Systems(AHRS). AHRS is a sensor fusion algorithm applying gravity and earth magnetic field referenced vector to compensate the drift by gyroscope and giving drift-free orientation. AHRS is a more cost effective solution than conventional high-grade IMUs that only integrate gyroscopes and rely on a very high bias stability of the gyroscopes. The attitude information on this sensor,
+        including roll, pitch, and yaw, is beneficial for tasks about "where the body faced", like navigation.
+        <br><br>
         </p>
         <div class="flex">
-            <div class="item"><img src="/img/article/GAN/GAN.png" height="300px"/></div>
-            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.4. GAN structure contains two adversarial networks: discriminator and generator, both influence optimization strategy</div>
+            <div class="item"><img src="/img/article/Posture/AHRS.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.4. Block diagram of the fusion algorithm for AHRS published by <a target="_blank" rel="noopener" href="https://www.hindawi.com/journals/tswj/2014/597180/">Amin et al.</a> The last three outputs are euler angle of IMU's orientation</div>
         </div>
         <div class="flex">
-            <div class="item"><img src="/img/article/GAN/GAN2.png" height="300px"/></div>
-            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.5. Algorithm of GAN states objective function of the generator and discriminator</div>
+            <div class="item"><img src="/img/article/Posture/sys.png" height="300px" width="500px"  /></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.5. Four IMUs are uniformly distributed on spinal curvature and aligned on sagittal plane from T2 to L5(approximately)</div>
         </div>
-        <h1>Prospective Study</h1>
-        <p><font face="TimesNewRoman" size=5> In the end, GANs were used to synthesize hundereds of COVID-19 patient chest x-ray images. In future work, COVID-19 classifier can be trained with these synthesized images by GANs and the performance would be compared to different data augmentation technique. Menon et al. reveiled the potential usage of this GAN-based transfer learning with chest x-ray images to detect COVID-19. I strongly believe this GAN-based classifier not only summarized the information of x-ray modality but also help us to build more robust classifier to overcome COVID-19. Another similar <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/8461430">paper published by Salehinejad et al.</a> states that their COVID-19 x-ray classifier has better performance on GAN-based hybrid dataset for 5 pathological classes. Thier wonderful work inspired me to share this idea to TMU staff at our journal seminar. More investigation on interplays between medical images synthetic and classifier performance should be done. 
+        <h1>Human Trials</h1>
+        <p><font face="TimesNewRoman" size=5> One contribution in this study is to construct dataset by only using single modality to collect trunk kinematic data. The human trials worked and followed this procedure: trial people would be instructed to do 7 common sitting postures mentioned above sequentially and continually. Each states were kept and changed from last state during five seconds. In other words, people need to undergo "transient" and "static" phases within five seconds and move to next run. There total 28 runs, which contain 4 runs for every postures, in single person's trial. The sampling rate of four IMUs is 50Hz.
+        <br><br>
+        By the characteristics of this transient-static and alternative trials, we can simply extract each phases. Then phases would be labeled automatically for supervised learning.
+        </p>
+        <div class="flex">
+            <div class="item"><img src="/img/article/Posture/sig.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.4. All signal channals during single trials
+        </div>
+        <div class="flex">
+            <div class="item"><img src="/img/article/Posture/det.png" height="300px" width="500px"  /></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.5. First-order differentiation of acceleration is applied to extract 28 intermittent phases and seperated as static(orange line) and transient phase</div>
+        </div>
+        <div class="flex">
+            <div class="item"><img src="/img/article/Posture/dataset.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.6. Label composition in this dataset</div>
+        </div>
+        <h1>Sitting Postures Recognition by Using RNN</h1>
+        <p><font face="TimesNewRoman" size=5> For sitting postures recognition, we used LSTM-based recurrent neural networks(RNN) to do sequence-to-sequence classification. The innovation of RNN is "memomry". By the special structure with memory cells in network, which can extract time-domain features on signals, RNN has been widely used to deal with sequential problems, e.g. translation, signal prediction, objective detection, and so on. Long short-term memory(LSTM) network has getting more and more popular in recent year. LSTM contains four "gates" in the structure, including input, output, memory, and "forget" gate. The forget gate, which was designed to format the memory cell, turns out to be of the greatest importance by <a target="_blank" rel="noopener" href="http://proceedings.mlr.press/v37/jozefowicz15.pdf">Google's research</a>
+        <br><br>
+        There are two LSTM-based layers in the deep learning structure in this study. Each of them contains 128 LSTM units to better extract information on temporal domain. The input feature vector is 36-dimension, with 9-axis raw signals on four sensors, and the output is one of the seven classes. 
+        <br><br>
+        </p>
+        <div class="flex">
+            <div class="item"><img src="/img/article/Posture/lstm.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.7. <a target="_blank" rel="noopener" href="https://developer.nvidia.com/discover/lstm">Schematic diagram of LSTM units.</a> Each LSTM unit contains four scalable gates: input, output, memory, and forget gate</div>
+        </div>
+        <div class="flex">
+            <div class="item"><img src="/img/article/Posture/NN.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.8. Proposed neural networks in this study with two layers containing 128 LSTM units</div>
+        </div>
+        <h1>Results</h1>
+        <p><font face="TimesNewRoman" size=5> The final accuracy in training is up to 99.0% in 600 epoch. F1-score is averaged around 0.966. These pivot results showed practical and potential usage of IMUs-based application with LSTM-RNN. We test another trial as testing sequence to this trained model, and the accuracy is 81.2%, which shows a slight overfitting in the LSTM model. In addition, there are misclassification in transient phases, as the same observation in <a target="_blank" rel="noopener" href="http://www.ijpmbs.com/uploadfile/2017/1227/20171227050020234.pdf">paper by Rivera et al.</a> One potential solution is to use averaging filter in temporal domain to condense information in this short period, and we will try to fix this problem in future work.
+        <br><br>
+        Also, to cost down the whole system, we tried to find the relavance between sensor numbers and classifier performances. The accuracy dropped as sensor numbers decrease, and we suggest three sensors as optimal series, with averaged accuracy 98.1%. Upper series(1st, 2nd, and 3rd) has higher training accuracy than lower series, we think the reason is the 4th sensor, which located on almost L5, is static during trunk bending and humpback. This caused classifier trained with lower series is less robust than with the upper one and indicated locations of sensors significantly influence the performance of this application.  
         <br><br>
         <div class="flex">
-            <div class="item"><img src="/img/article/GAN/GAN3.png" height="300px"/></div>
-            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.6. Synthesized chest x-ray image(right) and real images(left)</div>
+            <div class="item"><img src="/img/article/Posture/exp.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.9. Setup in traini    ng procedure</div>
+        </div>
+        <div class="flex">
+            <div class="item"><img src="/img/article/Posture/confu.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.10. Confusion matrix and stastical result using four sensors</div>
+        </div>
+        <div class="flex">
+            <div class="item"><img src="/img/article/Posture/tran.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.11. Performance on sequential classification of testing trials. Green block indicates misclassification on transient phases</div>
+        </div>
+        <div class="flex">
+            <div class="item"><img src="/img/article/Posture/num.png" height="300px"/></div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.12. Performance of the same neural network using different sensor series</div>
         </div>
     </body>
 </html>
