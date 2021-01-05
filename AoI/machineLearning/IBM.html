@@ -166,18 +166,18 @@
             <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.8. The attention weight matrix in a translation task. Multi-head attention makes Transformer to attend on different parts of input</div>
         </div>
         <h1>Results in Chemical Reaction Prediction</h1>
-        <p><font face="TimesNewRoman" size=5> Their baseline, i.e. no other machine learning techniques, top-1 accuracy is 88.3% which outperforms other NN model, including S2S and WLDN(GNN-based) on different dataset. Also, their model proved that they can predict in "mixed SMILES", i.e. composed of reactants and reagent by directly adjoin their SMILES, and still outperformed other works with seperated SMILES. This showed that their model is more convenient for chemist to deal with prediction without identifing reagent, which sometimes is difficult to do. In addition, compared to state-of-art model in regioselectivity-RegioSQM, Molecular Transformer, which has trained in diverse reaction types, still outperform in this specific reaction type prediction, with 81% and 83% top-1 accuracy, respectively.
+        <p><font face="TimesNewRoman" size=5> Their baseline, i.e. no other machine learning techniques, top-1 accuracy is 88.3% which outperforms other NN model, including S2S and WLDN(GNN-based) on different dataset. Also, their model proved that they can predict in "mixed SMILES", i.e. composed of reactants and reagent by directly adjoin their SMILES, and still outperformed other works with seperated SMILES. This showed that their model is more convenient for chemist to deal with prediction without identifing reagent, which sometimes is difficult to do. In addition, compared to state-of-art model in regioselectivity-RegioSQM, Molecular Transformer, which was trained in diverse reaction types, still outperformed in this specific reaction type prediction, with 81% and 83% top-1 accuracy, respectively.
         <br><br>
-        The most imporatant part of its success is the abilities of handling long sequential problem very well. Also multi-head attetntion helped model to find importances of information in different parts, as the way chemists considered the reaction in some relevance between molecules, e.g. functional group. Compared to human experts, the Molecular Transformer outperform on USPTO_MIT dataset with 87.5% accuracy, and human with 76.5%. In addition, the Molecular Transformer also found some subtle products, which human failed to observe, and make chemical-sense. This proved the potential usage of this model to help acceleration of drug discovery by predicting these subtle products. 
+        The most imporatant part of its success is the ability of handling long sequential problem. Multi-head attetntion helped model to find importances of information in different parts, as the way chemists considered the reaction in some relevance between different parts of molecules, e.g. functional group. Compared to human experts, the Molecular Transformer outperform on USPTO_MIT dataset with 87.5% accuracy, and human with 76.5%. In addition, the Molecular Transformer also found some subtle products, which human failed to observe, and make chemical-sense. This proved the potential usage of this model to help acceleration of drug discovery by predicting these subtle products. 
         <br><br>
-        In the end of this paper, they also evaluate the uncertainty of model's estimation to prove its abilities of handle different length of input. The basic idea is give every estimation a confidence score and quantify the Pearson correlation coefficient between this confidence score and the input length. The result is 0.06, which indicated no correlation within these two indice. In other words, Molecular Transformer can handle long sequence without losing significant ability.</p>
+        In the end of this paper, they also evaluate the uncertainty of model's estimation to prove its abilities of handling different length of input. The basic idea is to give every estimation a confidence score and quantify the Pearson correlation coefficient between this confidence score and the input length. The result is 0.06, which indicated no correlation within these two indice. In other words, Molecular Transformer can handle long sequence without losing significant ability.</p>
         <div class="flex">
             <div class="item"><img src="/img/article/IBM/res1.png" height="300px"/></div>
             <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.9. Results: model performance. Machine learning techniques like Ensemble, checkpoimts averaged weight, and data augmentation were used in this study</div>
         </div>
         <div class="flex">
             <div class="item"><img src="/img/article/IBM/res2.png" height="300px"/></div>
-            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.10. Results: model performance related to other NN model, including S2S and GNN-based algorithm. Also, the influence by template popularity, i.e. the number of times a particular reaction type is seen in the data set, was investigated</div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.10. Results: model performance compared to other NN model, including S2S and GNN-based algorithm. Also, the influence by template popularity, i.e. the number of times a particular reaction type is seen in the data set, was investigated</div>
         </div>
         <div class="flex">
             <div class="item"><img src="/img/article/IBM/res3.png" height="300px"/></div>
@@ -193,7 +193,7 @@
         </div>
         <div class="flex">
             <div class="item"><img src="/img/article/IBM/res6.png" height="300px"/></div>
-            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.14. Results: model performance in different reaction types. The worst result is in resolution prediction, as S2S model performed</div>
+            <div class="imgdes"><font face="TimesNewRoman" size=4>Fig.14. Results: model performance in different reaction types. The worst result was in resolution prediction, as S2S model performed</div>
         </div>
         <div class="flex">
             <div class="item"><img src="/img/article/IBM/res7.png" height="300px"/></div>
